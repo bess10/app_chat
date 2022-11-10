@@ -3,9 +3,9 @@ const app = express();
 const http = require('http').Server(app);//le damos el objeto app que hemos creado
 const io = require('socket.io')(http)//llamamos al socket
 
-const PUERTO = process.env.PORT || 0;
+const PUERTO = 8080;
 
-app.get('/', (req, res) => {
+app.get('/chat', (req, res) => {
     res.render('index.ejs')
 });
 
